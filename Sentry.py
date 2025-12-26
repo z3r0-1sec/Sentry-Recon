@@ -13,22 +13,10 @@ Key features:
 - Permissive domain validation for modern TLDs (punycode, .co.uk, .technology, etc.)
 - User-Agent rotation & natural delays for stealth
 
-Usage:
-    python3 Sentry.py -d example.com
-    python3 Sentry.py -d example.co.uk
-
-Requirements:
-    pip install requests beautifulsoup4 dnspython whoisit
-
 Limitations:
     - DNSDumpster can be rate-limited or change layout (rare but possible)
     - crt.sh shows historical data — some subs may be defunct
     - No active probing (intentional — keeps it fully passive)
-
-Tips for GitHub users:
-    - Fork & extend: Add more sources (e.g., SecurityTrails free, AlienVault OTX)
-    - Add live DNS validation option (breaks pure-passive)
-    - Integrate with recon frameworks like Recon-ng
 
 License: MIT
 Author: z3r0-1 @z3r0-1sec
@@ -298,7 +286,7 @@ def main():
 
 if __name__ == "__main__":
     print("""
-    Sentry-Recon
+    Sentry-Recon by z3r0-1sec
     Pure Passive Recon Tool - Fast, Clean, and Stealthy
     """)
     main()
