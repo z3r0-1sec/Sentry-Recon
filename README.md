@@ -12,19 +12,37 @@ Includes: subdomain attribution, full DNS records (A/AAAA/MX/TXT/NS), WHOIS/RDAP
 - JSON + human-readable reports
 - Permissive validation for modern TLDs (punycode, .co.uk, .technology, etc.)
 
-## Installation
+## Recommended Installation: Use a Virtual Environment (avoids system Python issues)
+Modern Linux distributions protect the system Python, so direct `pip install` may fail with "externally-managed-environment". Use a virtual environment:
+
 ```bash
 git clone https://github.com/z3r0-1sec/Sentry-Recon.git
 cd Sentry-Recon
-pip install -r requirements.txt
+
+python3 -m venv venv
+source venv/bin/activate
+
+pip install -r requirements.txt    
 ```
+
 ## Usage
 ```bash
 python Sentry.py -d example.com
+
 # or (make executable first)
 chmod +x Sentry.py
 ./Sentry.py -d example.com
 ```
+
+## To deactivate venv ( after finished using Sentry.py )
+```bash
+deactivate
+```
+Stay in the venv or create a shell alias:
+```bash
+alias sentry-recon='cd ~/path/to/Sentry-Recon && source venv/bin/activate && python Sentry.py'
+```
+This keeps it simple, safe, and works everywhere.
 
 ## Example Run
 [+] Querying crt.sh...
