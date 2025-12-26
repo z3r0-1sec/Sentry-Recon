@@ -46,22 +46,30 @@ This keeps it simple, safe, and works everywhere.
 
 ## Example Run
 [+] Querying crt.sh...
+
 [+] 12 from crt.sh
+
 [+] Querying DNSDumpster...
+
 [+] 3 from DNSDumpster
 
 [+] Unique Subdomains Found:
- api.example.com (crt.sh)
- mail.example.com (crt.sh, dnsdumpster)
- ...
+
+api.example.com (crt.sh)
+
+mail.example.com (crt.sh, dnsdumpster)...
 
 [+] Done! All results saved in output/example_com
 
 ## Output Files
 > subdomains.txt — Flat list of unique subdomains
+
 > subdomains_with_sources.json — Subdomains with source attribution
+
 > dns_info.json — DNS records (A/AAAA/MX/TXT/NS)
+
 > whois.txt — Raw WHOIS JSON
+
 > whois_summary.txt — Readable WHOIS summary
 
 ## Ethical Use Only
